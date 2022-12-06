@@ -1,0 +1,8 @@
+table, th, td {
+    border: 1px solid;
+}
+
+.cell {
+    background-color: white;
+    cursor: pointer;
+}

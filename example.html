@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!--Name: Emma Gostling
+	filename: ABeautifulLife.html
+	-->
+	<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Get A Clue</title>
+	<link href="example.css" rel="stylesheet">
+</head>
+<body>
+    <table id="outerFrame" style="border: 1px solid black; width: 100%;">
+        <tbody>
+            <tr>
+                <td style="width:20%;vertical-align: top;">
+                    <table id="clueTable" style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>Player</th>
+                                <th>Questioned</th>
+                                <th>Suspect</th>
+                                <th>Weapon</th>
+                                <th>Room</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <button id="getAClue">Get A Clue</button>
+                </td>
+                <td>
+                    <table id="worksheet" style="width: 100%;">
+                        <col style="width:50%">
+                        <col style="width:50%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table id="notes" style="width: 100%;">
+                                        <col style="width:10%">
+                                        <col style="width:40%">
+                                        <col style="width:10%">
+                                        <col style="width:40%">
+                                        <tbody>
+                                            <tr>
+                                                <td>1 <button id="nb1" class="addNotes" data-num="1">+</button></td>
+                                                <td>
+                                                    <table id="notes1" style="width: 100%;">
+                                                        <tbody></tbody>
+                                                    </table>
+                                                </td>
+                                                <td>4 <button id="nb4" class="addNotes" data-num="4">+</button></td>
+                                                <td> 
+                                                    <table id="notes4" style="width: 100%;">
+                                                        <tbody></tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2 <button id="nb2" class="addNotes" data-num="2">+</button></td>
+                                                <td>
+                                                    <table id="notes2" style="width: 100%;">
+                                                        <tbody></tbody>
+                                                    </table>
+                                                </td>
+                                                <td>5 <button id="nb5" class="addNotes" data-num="5">+</button></td>
+                                                <td>
+                                                    <table id="notes5" style="width: 100%;">
+                                                        <tbody></tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3 <button id="nb3" class="addNotes" data-num="3">+</button></td>
+                                                <td>
+                                                    <table id="notes3" style="width: 100%;">
+                                                        <tbody></tbody>
+                                                    </table>
+                                                </td>
+                                                <td>6 <button id="nb6" class="addNotes" data-num="6">+</button></td>
+                                                <td>
+                                                    <table id="notes6" style="width: 100%;">
+                                                        <tbody></tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table id="answer" style="width: 100%">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align:center;">
+                                                    <table id="answerEntry" style="display: inline-block;">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Suspect</th>
+                                                                <th>Weapon</th>
+                                                                <th>Room</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <select id="answerSuspect" class="suspectList">
+                                                                    </select>
+                                                                </td>
+                                                                <td>
+                                                                    <select id="answerWeapon" class="weaponList">
+                                                                    </select>
+                                                                </td>
+                                                                <td>
+                                                                    <select id="answerRoom" class="roomList">
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:center;">
+                                                    <table id="playerCards"  style="display: inline-block;">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Player</th>
+                                                                <th>Card 1</th>
+                                                                <th>Card 2</th>
+                                                                <th>Card 3</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3</td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4</td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>5</td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>6</td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                                <td>
+                                                                    <select class="cards"></select>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <button id="checkAnswer">Check Answer</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <table id="checksheet" style="width: 100%;">
+                                        <col style="width:2%">
+                                        <col style="width:13%">
+                                        <col style="width:15%">
+                                        <col style="width:20%">
+                                        <col style="width:2%">
+                                        <col style="width:13%">
+                                        <col style="width:15%">
+                                        <col style="width:20%">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    P
+                                                </th>
+                                                <th>
+                                                    Suspect
+                                                </th>
+                                                <th>
+                                                    Weapon
+                                                </th>
+                                                <th>
+                                                    Room
+                                                </th>
+                                                <th>
+                                                    P
+                                                </th>
+                                                <th>
+                                                    Suspect
+                                                </th>
+                                                <th>
+                                                    Weapon
+                                                </th>
+                                                <th>
+                                                    Room
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Peacock</td>
+                                                            <td class="cell">Green</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Scarlet</td>
+                                                            <td class="cell">Plum</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Mustard</td>
+                                                            <td class="cell">White</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Candlestick</td>
+                                                            <td class="cell">Knife</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Revolver</td>
+                                                            <td class="cell">Rope</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Lead Pipe</td>
+                                                            <td class="cell">Wrench</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Cons.</td>
+                                                            <td class="cell">Lounge</td>
+                                                            <td class="cell">Library</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Dining Room</td>
+                                                            <td class="cell">Kitchen</td>
+                                                            <td class="cell">Hall</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Billiard Room</td>
+                                                            <td class="cell">Ballroom</td>
+                                                            <td class="cell">Study</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>4</td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Peacock</td>
+                                                            <td class="cell">Green</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Scarlet</td>
+                                                            <td class="cell">Plum</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Mustard</td>
+                                                            <td class="cell">White</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Candlestick</td>
+                                                            <td class="cell">Knife</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Revolver</td>
+                                                            <td class="cell">Rope</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Lead Pipe</td>
+                                                            <td class="cell">Wrench</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Cons.</td>
+                                                            <td class="cell">Lounge</td>
+                                                            <td class="cell">Library</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Dining Room</td>
+                                                            <td class="cell">Kitchen</td>
+                                                            <td class="cell">Hall</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Billiard Room</td>
+                                                            <td class="cell">Ballroom</td>
+                                                            <td class="cell">Study</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Peacock</td>
+                                                            <td class="cell">Green</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Scarlet</td>
+                                                            <td class="cell">Plum</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Mustard</td>
+                                                            <td class="cell">White</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Candlestick</td>
+                                                            <td class="cell">Knife</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Revolver</td>
+                                                            <td class="cell">Rope</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Lead Pipe</td>
+                                                            <td class="cell">Wrench</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Cons.</td>
+                                                            <td class="cell">Lounge</td>
+                                                            <td class="cell">Library</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Dining Room</td>
+                                                            <td class="cell">Kitchen</td>
+                                                            <td class="cell">Hall</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Billiard Room</td>
+                                                            <td class="cell">Ballroom</td>
+                                                            <td class="cell">Study</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>5</td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Peacock</td>
+                                                            <td class="cell">Green</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Scarlet</td>
+                                                            <td class="cell">Plum</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Mustard</td>
+                                                            <td class="cell">White</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Candlestick</td>
+                                                            <td class="cell">Knife</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Revolver</td>
+                                                            <td class="cell">Rope</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Lead Pipe</td>
+                                                            <td class="cell">Wrench</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Cons.</td>
+                                                            <td class="cell">Lounge</td>
+                                                            <td class="cell">Library</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Dining Room</td>
+                                                            <td class="cell">Kitchen</td>
+                                                            <td class="cell">Hall</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Billiard Room</td>
+                                                            <td class="cell">Ballroom</td>
+                                                            <td class="cell">Study</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Peacock</td>
+                                                            <td class="cell">Green</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Scarlet</td>
+                                                            <td class="cell">Plum</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Mustard</td>
+                                                            <td class="cell">White</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Candlestick</td>
+                                                            <td class="cell">Knife</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Revolver</td>
+                                                            <td class="cell">Rope</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Lead Pipe</td>
+                                                            <td class="cell">Wrench</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Cons.</td>
+                                                            <td class="cell">Lounge</td>
+                                                            <td class="cell">Library</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Dining Room</td>
+                                                            <td class="cell">Kitchen</td>
+                                                            <td class="cell">Hall</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Billiard Room</td>
+                                                            <td class="cell">Ballroom</td>
+                                                            <td class="cell">Study</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>6</td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Peacock</td>
+                                                            <td class="cell">Green</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Scarlet</td>
+                                                            <td class="cell">Plum</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Mustard</td>
+                                                            <td class="cell">White</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Candlestick</td>
+                                                            <td class="cell">Knife</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Revolver</td>
+                                                            <td class="cell">Rope</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Lead Pipe</td>
+                                                            <td class="cell">Wrench</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table class="check options">
+                                                        <tr>
+                                                            <td class="cell">Cons.</td>
+                                                            <td class="cell">Lounge</td>
+                                                            <td class="cell">Library</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Dining Room</td>
+                                                            <td class="cell">Kitchen</td>
+                                                            <td class="cell">Hall</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="cell">Billiard Room</td>
+                                                            <td class="cell">Ballroom</td>
+                                                            <td class="cell">Study</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+<script src="example.js"></script>
+
+</html>
